@@ -1,0 +1,11 @@
+{
+  "plugins": ["transform-es2015-shorthand-properties"],
+  "presets": [
+    ["env", {
+      "modules": false,
+      "targets": {
+        "browsers": ["last 3 versions", "not ie <= 8"]
+      }
+    }]
+  ]
+}
