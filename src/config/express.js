@@ -23,7 +23,7 @@ module.exports = (() => {
     app.use(logger('dev'))
 
     // enable cross origin requests
-    app.use(cors({ origin: config.security.cors.allowOrigins }))
+    app.use(cors({ origin: config.security.cors.whitelist }))
 
     // security
     app.use(helmet.frameguard())

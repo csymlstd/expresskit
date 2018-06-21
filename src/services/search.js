@@ -1,10 +1,11 @@
-const config = require('../config/default')
+const config = require('../config')()
+const Dependency = require('../config/dependencies')
 
-if(config.search.enabled) {
-    const es = require('elasticsearch')
-    const elastic = new es.Client({
-        host: config.search.host || process.env.ELASTIC_SSL_URL
-    })
+if(config.search.url) {
+    const es = Dependency.get('elasticsearch')
+    const elastic = Dependency.register('elasticsearch-client', new es.Client({
+        host: config.search.url
+    }))
 }
 
 const defaults = { index: config.search.index, type: config.search.defaultType }

@@ -24,6 +24,10 @@ Dependency.register('mailer-mailgun', () => {
     return require('nodemailer-mailgun-transport')
 })
 
+Dependency.register('elasticsearch', () => {
+    return require('elasticsearch')
+})
+
 
 // Dependency.register('', () => {
 //     return
