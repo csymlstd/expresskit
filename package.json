@@ -21,7 +21,7 @@
     "mime-types": "^2.1.18",
     "mongoose": "^5.1.6",
     "morgan": "^1.9.0",
-    "nodemailer": "^4.6.7",
+    "nodemailer": "^6.4.13",
     "nodemailer-mailgun-transport": "^1.4.0",
     "qs": "^6.5.2",
     "redis": "^2.8.0",
